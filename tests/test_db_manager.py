@@ -27,25 +27,25 @@ def test_the_entire_output():
     drop_data_base(name_database)
 
 
-def test_withdrawal_by_product():
+def test_conclusion_by_product():
     create_base(name_database, name_table)
     DBManager.checking_completeness_database(StringIO("""2"""), name_database, name_table)
-    assert type(DBManager.withdrawal_by_product(name_database, name_table, product)) is list
-    assert len(DBManager.withdrawal_by_product(name_database, name_table, product)) != 0
+    assert type(DBManager.conclusion_by_product(name_database, name_table, product)) is list
+    assert len(DBManager.conclusion_by_product(name_database, name_table, product)) != 0
     drop_data_base(name_database)
 
 
-def test_withdrawal_by_company():
+def test_conclusion_by_company():
     create_base(name_database, name_table)
     DBManager.checking_completeness_database(StringIO("""2"""), name_database, name_table)
-    assert type(DBManager.withdrawal_by_company(name_database, name_table, company)) is list
-    assert len(DBManager.withdrawal_by_company(name_database, name_table, company)) != 0
+    assert type(DBManager.conclusion_by_company(name_database, name_table, company)) is list
+    assert len(DBManager.conclusion_by_company(name_database, name_table, company)) != 0
     drop_data_base(name_database)
 
 
-def test_withdrawal_by_company_and_product():
+def test_conclusion_by_company_and_product():
     create_base(name_database, name_table)
     DBManager.checking_completeness_database(StringIO("""2"""), name_database, name_table)
-    assert type(DBManager.withdrawal_by_company_and_product(name_database, name_table, company, product)) is list
-    assert len(DBManager.withdrawal_by_company_and_product(name_database, name_table, company, product)) != 0
+    assert type(DBManager.conclusion_by_company_and_product(name_database, name_table, company, product)) is list
+    assert len(DBManager.conclusion_by_company_and_product(name_database, name_table, company, product)) != 0
     drop_data_base(name_database)
