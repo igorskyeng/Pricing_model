@@ -139,7 +139,7 @@ class Algorithm:
         # Итерация по всем строкам списка 'list_pricing_model'.
         for item in range(0, len(list_pricing_model)):
             # Фильтр по выбранной компании.
-            if list_pricing_model[item][3] not in list_product:
+            if list_pricing_model[item][4] not in list_product:
                 list_product.append(list_pricing_model[item][4])
 
             # Поиск максимальной цены без учета затрат, запись принадлежащей ей продукт и id строки в БД.
@@ -211,7 +211,7 @@ class Algorithm:
         # Итерация по всем строкам списка 'list_pricing_model'.
         for item in range(0, len(list_pricing_model)):
             # Фильтр по выбранному продукту.
-            if list_pricing_model[item][4] not in list_company:
+            if list_pricing_model[item][3] not in list_company:
                 list_company.append(list_pricing_model[item][3])
 
             # Поиск максимальной цены без учета затрат, запись принадлежащей ей компанию и id строки в БД.
